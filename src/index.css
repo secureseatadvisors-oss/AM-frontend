@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-slate-950 text-slate-200;
+    font-family: 'Inter', 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Syne', 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-slate-900/60 backdrop-blur-xl border border-slate-700/50;
+  }
+  .glass-card {
+    @apply bg-slate-900 border border-slate-800;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-teal-600 hover:bg-teal-500 text-white font-semibold rounded-xl transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-teal-900/30;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 border border-slate-700 hover:border-teal-500/60 text-slate-300 hover:text-white font-semibold rounded-xl transition-all duration-200;
+  }
+  .input-field {
+    @apply w-full bg-slate-800/80 border border-slate-700 focus:border-teal-500 text-slate-100 placeholder-slate-500 rounded-xl px-4 py-3 outline-none transition-all duration-200 focus:ring-2 focus:ring-teal-500/20;
+  }
+  .section-tag {
+    @apply inline-block text-teal-400 text-xs font-semibold uppercase tracking-widest mb-3;
+  }
+  .section-heading {
+    @apply font-bold text-white leading-tight;
+    font-family: 'Syne', sans-serif;
+  }
+  .gradient-text {
+    @apply bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent;
+  }
+}
+
+.hero-glow {
+  background:
+    radial-gradient(ellipse 70% 50% at 50% -5%, rgba(13,148,136,0.18) 0%, transparent 65%),
+    #020817;
+}
+
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(20,184,166,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(20,184,166,0.04) 1px, transparent 1px);
+  background-size: 52px 52px;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up {
+  animation: fadeUp 0.55s ease forwards;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #020817; }
+::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #0d9488; }
