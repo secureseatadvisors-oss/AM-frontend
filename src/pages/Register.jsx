@@ -75,7 +75,7 @@ export default function Register() {
         <div className="text-center mb-8">
           <div className="section-tag">Registration</div>
           <h1 className="section-heading text-3xl sm:text-4xl mb-2">Register for Counselling</h1>
-          <p className="text-slate-400 text-sm">Fill your details and complete ₹999 payment to receive your Counselling ID.</p>
+          <p className="text-slate-400 text-sm">Fill your details and complete ₹2499 payment to receive your Counselling ID.</p>
         </div>
 
         <div className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
@@ -86,8 +86,8 @@ export default function Register() {
               <div className="text-slate-400 text-xs mt-0.5">One-time · All CAP rounds included</div>
             </div>
             <div className="text-right">
-              <div className="text-slate-500 text-xs line-through">₹2,999</div>
-              <div className="text-teal-400 font-bold text-xl" style={{fontFamily:'Syne,sans-serif'}}>₹999</div>
+              <div className="text-slate-500 text-xs line-through">₹4,999</div>
+              <div className="text-teal-400 font-bold text-xl" style={{fontFamily:'Syne,sans-serif'}}>₹2,499</div>
             </div>
           </div>
 
@@ -140,7 +140,7 @@ export default function Register() {
               className="btn-primary w-full justify-center py-4 text-base mt-1 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100">
               {loading ? (
                 <><div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />Processing...</>
-              ) : 'Pay ₹999 & Get Counselling ID'}
+              ) : 'Pay ₹2,499 & Get Counselling ID'}
             </button>
 
             <p className="text-center text-slate-500 text-xs">

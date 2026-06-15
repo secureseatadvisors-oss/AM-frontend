@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const steps = [
   {
-    n: '01', title: 'Register & Pay ₹999',
+    n: '01', title: 'Register & Pay ₹2499',
     desc: 'Fill your name, mobile, email, and CET percentile. Complete secure payment via Razorpay.',
     points: ['Takes under 5 minutes', 'Pay via UPI, card, or net banking', 'Receive Counselling ID (e.g. MHCETAM0001) instantly', 'Confirmation email sent to your inbox'],
   },
@@ -76,7 +76,7 @@ export default function CounsellingProcess() {
         </div>
 
         <div className="text-center mt-12">
-          <Link to="/register" className="btn-primary text-base py-3.5 px-10">Register Now — ₹999</Link>
+          <Link to="/register" className="btn-primary text-base py-3.5 px-10">Register Now — ₹2499</Link>
         </div>
       </div>
     </div>

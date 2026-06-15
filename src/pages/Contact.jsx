@@ -21,7 +21,7 @@ export default function Contact() {
         <div className="grid md:grid-cols-2 gap-8">
           {/* Contact methods */}
           <div className="flex flex-col gap-4">
-            <div className="bg-slate-900 border border-slate-800 rounded-xl p-5">
+            {/* <div className="bg-slate-900 border border-slate-800 rounded-xl p-5">
               <div className="text-2xl mb-2">📱</div>
               <h3 className="text-white font-semibold text-base mb-1" style={{fontFamily:'Syne,sans-serif'}}>WhatsApp</h3>
               <p className="text-slate-400 text-sm mb-3">Fastest way to reach us. Replies within a few hours.</p>
@@ -29,15 +29,15 @@ export default function Contact() {
                 className="inline-flex items-center gap-2 bg-emerald-900/30 border border-emerald-700/40 text-emerald-400 rounded-lg px-4 py-2 text-sm font-medium hover:bg-emerald-900/50 transition-colors">
                 Chat on WhatsApp →
               </a>
-            </div>
-            <div className="bg-slate-900 border border-slate-800 rounded-xl p-5">
+            </div> */}
+            {/* <div className="bg-slate-900 border border-slate-800 rounded-xl p-5">
               <div className="text-2xl mb-2">📧</div>
               <h3 className="text-white font-semibold text-base mb-1" style={{fontFamily:'Syne,sans-serif'}}>Email</h3>
               <p className="text-slate-400 text-sm mb-2">For detailed queries or documentation support.</p>
               <a href="mailto:counselling@ankushmayachari.com" className="text-teal-400 text-sm hover:text-teal-300">
                 counselling@ankushmayachari.com
               </a>
-            </div>
+            </div> */}
             <div className="bg-slate-900 border border-slate-800 rounded-xl p-5">
               <div className="text-2xl mb-2">⏱</div>
               <h3 className="text-white font-semibold text-base mb-1" style={{fontFamily:'Syne,sans-serif'}}>Response Times</h3>

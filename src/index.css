@@ -3,17 +3,29 @@
 @tailwind utilities;
 
 @layer base {
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-slate-950 text-slate-200;
-    font-family: 'Inter', 'DM Sans', sans-serif;
+    font-family: "Inter", sans-serif;
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3, h4 {
-    font-family: 'Syne', 'Inter', sans-serif;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .section-heading {
+    font-family: "Merriweather", serif;
   }
 }
+
 
 @layer components {
   .glass {

@@ -67,7 +67,7 @@ export default function Navbar() {
             ) : (
               <>
                 <Link to="/login" className="text-sm text-slate-400 hover:text-white transition-colors">Login</Link>
-                <Link to="/register" className="btn-primary text-sm py-2 px-5">Register — ₹999</Link>
+                <Link to="/register" className="btn-primary text-sm py-2 px-5">Register — ₹2499</Link>
               </>
             )}
           </div>
