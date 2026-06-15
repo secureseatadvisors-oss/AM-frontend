@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const faqs = [
   { q: 'Who is this counselling for?', a: 'Any student who has appeared in MHT-CET 2026 and wants to secure a seat in a Maharashtra engineering college through the CAP process.' },
-  { q: 'What is included in ₹999?', a: 'Everything — college shortlisting, CAP Round 1/2/3 guidance, choice filling strategy, branch counselling, document checklist, and WhatsApp support throughout the season.' },
+  { q: 'What is included in ₹2499?', a: 'Everything — college shortlisting, CAP Round 1/2/3 guidance, choice filling strategy, branch counselling, document checklist, and WhatsApp support throughout the season.' },
   { q: 'How will I receive the guidance?', a: 'After registering, Ankush Mayachari will connect with you on WhatsApp on your registered mobile number. All further guidance happens there.' },
   { q: 'What is the Counselling ID?', a: 'After payment, you receive a unique ID like MHCETAM0001. It is used to identify and track your registration. You need it to log in to your dashboard.' },
   { q: 'Do you cover all categories?', a: 'Yes — General, OBC, SC, ST, VJ, NT, SBC, and EWS. Category-specific seat analysis is part of the guidance.' },
