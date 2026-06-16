@@ -22,96 +22,75 @@ export default function Home() {
 
       <Hero />
 
-      {/* ── TRUST BAR ── */}
-      <section className="bg-slate-900 border-y border-slate-800 py-6">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-x-10 gap-y-3">
-            {['Secure payment via Razorpay', 'Instant Counselling ID on payment', 'WhatsApp support throughout', 'All CAP rounds covered', 'No hidden charges'].map((t) => (
-              <div key={t} className="flex items-center gap-2 text-slate-400 text-sm">
-                <Check />
-                {t}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
       <WhatsIncluded/>
 
       {/* ── HOW IT WORKS ── */}
-      <section className="py-20 bg-slate-900/50 border-y border-slate-800">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <div className="section-tag">Simple Process</div>
-            <h2 className="section-heading text-3xl sm:text-4xl">4 Steps to Your Dream College</h2>
+    <section className="py-20 bg-[#F4F6F9] border-y border-slate-200 relative overflow-hidden">
+      {/* Soft ambient backdrops to break up structural brightness */}
+      <div className="absolute top-1/2 left-1/4 w-[400px] h-[400px] bg-blue-100/40 rounded-full filter blur-3xl -z-10 transform -translate-y-1/2" />
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        {/* Header Block */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-200/80 text-slate-700 font-bold text-xs tracking-wider uppercase mb-3 border border-slate-300/50">
+            Admissions Roadmap
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              { n: '01', title: 'Register & Pay', desc: 'Fill your details, pay ₹999 and receive your Counselling ID instantly.' },
-              { n: '02', title: 'Connect on WhatsApp', desc: 'Get onboarded and share your preferences and category details.' },
-              { n: '03', title: 'Get Your Strategy', desc: 'Receive a personalised college list and CAP round strategy.' },
-              { n: '04', title: 'Confirm Your Seat', desc: 'Guided through choice filling, allotment, and final admission.' },
-            ].map(({ n, title, desc }) => (
-              <div key={n} className="bg-slate-900 border border-slate-800 rounded-xl p-5 relative">
-                <div className="text-teal-600 font-mono font-bold text-sm mb-3">{n}</div>
-                <h3 className="text-white font-semibold text-base mb-2" style={{fontFamily:'Syne,sans-serif'}}>{title}</h3>
-                <p className="text-slate-400 text-sm leading-relaxed">{desc}</p>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-8">
-            <Link to="/process" className="btn-outline text-sm">View Detailed Process</Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ── TESTIMONIALS ── */}
-      <section className="py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <div className="section-tag">Student Stories</div>
-            <h2 className="section-heading text-3xl sm:text-4xl">Real Students, Real Results</h2>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[
-              { name: 'Rahul Patil', info: '94.5 percentile · COEP CS', text: 'Got into COEP Computer Science — my first choice. The choice filling strategy was exactly right.' },
-              { name: 'Priya Sharma', info: '88.2 percentile · VJTI IT', text: 'Thought VJTI IT was out of reach at my percentile. The guidance changed everything.' },
-              { name: 'Aditya Deshmukh', info: '76.8 percentile · PIT Mech', text: 'The category-seat analysis helped me pick a college I would have missed on my own.' },
-            ].map(({ name, info, text }) => (
-              <div key={name} className="bg-slate-900 border border-slate-800 rounded-xl p-6">
-                <div className="flex gap-0.5 mb-3">
-                  {[...Array(5)].map((_, i) => <span key={i} className="text-yellow-400 text-sm">★</span>)}
-                </div>
-                <p className="text-slate-300 text-sm leading-relaxed mb-4">"{text}"</p>
-                <div className="flex items-center gap-3 border-t border-slate-800 pt-4">
-                  <div className="w-8 h-8 rounded-full bg-teal-700 flex items-center justify-center text-white font-bold text-sm shrink-0">
-                    {name[0]}
-                  </div>
-                  <div>
-                    <div className="text-white font-medium text-sm">{name}</div>
-                    <div className="text-slate-500 text-xs">{info}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── CTA ── */}
-      <section className="py-20 bg-slate-900/50 border-t border-slate-800">
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="section-heading text-3xl sm:text-4xl mb-4">
-            Don't navigate admissions alone
+          <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+            4 Steps to Secure Your Dream College
           </h2>
-          <p className="text-slate-400 text-lg mb-8 leading-relaxed">
-            Register for ₹2499 and get complete, personal guidance through every step of MHT-CET 2026 counselling.
+          <p className="text-sm text-slate-500 font-semibold max-w-xl mx-auto mt-2">
+            From clicking an Instagram link to stepping onto your new campus, your entire pipeline is managed.
           </p>
-          <Link to="/register" className="btn-primary text-base py-4 px-10 inline-flex">
-            Start Registration — ₹2499
-          </Link>
-          <p className="text-slate-500 text-sm mt-4">Secure payment · Instant ID · WhatsApp support</p>
         </div>
-      </section>
+
+        {/* Step Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            { n: '01', title: 'Register & Pay', desc: 'Securely submit your student details and unlock your premium Counselling ID instantly.' },
+            { n: '02', title: 'Connect on WhatsApp', desc: 'Directly join Ankush Sir’s priority group to safely share category and preference data.' },
+            { n: '03', title: 'Get Your Strategy', desc: 'Receive a personalized college choice list backed by strict, real-time cutoff metrics.' },
+            { n: '04', title: 'Confirm Your Seat', desc: 'Get final guidance through actual CAP round choice filling and seat allotment.' },
+          ].map(({ n, title, desc }) => (
+            <div 
+              key={n} 
+              className="bg-white/80 backdrop-blur-md border border-white/60 rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(148,163,184,0.12)] hover:shadow-[0_10px_30px_-6px_rgba(29,78,216,0.15)] hover:border-blue-200 transition-all duration-300 group hover:-translate-y-1"
+            >
+              <div className="flex justify-between items-start mb-4">
+                {/* Clean, low-contrast Step Counter Tag */}
+                <div className="text-slate-500 font-mono font-black text-xs bg-slate-100 px-2.5 py-1 rounded-md border border-slate-200/60 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 transition-colors">
+                  STEP {n}
+                </div>
+                
+                {/* Visual Connector Dot */}
+                <div className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-blue-500 transition-colors mt-2" />
+              </div>
+              
+              {/* Step Title */}
+              <h3 className="text-slate-900 font-bold text-lg mb-2 tracking-tight group-hover:text-blue-700 transition-colors">
+                {title}
+              </h3>
+              
+              {/* Step Description */}
+              <p className="text-slate-600 text-sm leading-relaxed font-medium">
+                {desc}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Call To Action Block */}
+        {/* <div className="text-center mt-14">
+          <Link 
+            to="/process" 
+            className="inline-flex items-center justify-center font-bold text-sm text-slate-700 hover:text-blue-600 bg-white hover:bg-slate-50 border border-slate-200 px-8 py-3.5 rounded-xl shadow-sm hover:shadow transition-all transform active:scale-98"
+          >
+            View Detailed Process Blueprint →
+          </Link>
+        </div> */}
+
+      </div>
+    </section>
 
     </div>
   );

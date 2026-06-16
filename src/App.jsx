@@ -42,7 +42,7 @@ const AppRoutes = () => {
       <Route path="/" element={<PublicLayout><Home /></PublicLayout>} />
       <Route path="/about" element={<PublicLayout><About /></PublicLayout>} />
       <Route path="/services" element={<PublicLayout><Services /></PublicLayout>} />
-      <Route path="/process" element={<PublicLayout><CounsellingProcess /></PublicLayout>} />
+      {/* <Route path="/process" element={<PublicLayout><CounsellingProcess /></PublicLayout>} /> */}
       <Route path="/pricing" element={<PublicLayout><Pricing /></PublicLayout>} />
       <Route path="/faq" element={<PublicLayout><FAQ /></PublicLayout>} />
       <Route path="/contact" element={<PublicLayout><Contact /></PublicLayout>} />
