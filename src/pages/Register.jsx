@@ -4,6 +4,7 @@ import api from '../utils/api';
 
 export default function Register() {
   const navigate = useNavigate();
+  const [disclaimerAccepted, setDisclaimerAccepted] = useState(false);
 
   const [form, setForm] = useState({
     name: '',
@@ -38,6 +39,13 @@ export default function Register() {
 
     try {
       const loaded = await loadRazorpay();
+      if (!disclaimerAccepted) {
+  setError(
+    'Please accept all Terms & Conditions before proceeding.'
+  );
+        setLoading(false);
+  return;
+}
 
       if (!loaded) {
         setError(
@@ -172,6 +180,8 @@ export default function Register() {
             </div>
           </div>
 
+          
+
           {/* Form */}
           <form
             onSubmit={handleSubmit}
@@ -243,6 +253,22 @@ export default function Register() {
               </p>
             </div>
 
+            {form.cetPercentile && Number(form.cetPercentile) < 25 && (
+  <div className="bg-amber-50 border border-amber-200 rounded-xl p-3 text-amber-800 text-sm">
+    ⚠️ Students below 25 percentile should understand that admission or seat
+    allotment cannot be guaranteed.
+  </div>
+)}
+
+{form.cetPercentile &&
+  Number(form.cetPercentile) >= 25 &&
+  Number(form.cetPercentile) <= 45 && (
+    <div className="bg-blue-50 border border-blue-200 rounded-xl p-3 text-blue-800 text-sm">
+      ℹ️ Students between 25 and 45 percentile should remain flexible with
+      branch and city preferences for better admission opportunities.
+    </div>
+)}
+
             <div>
               <label className="block text-slate-700 text-sm font-semibold mb-2">
                 MHT-CET Percentile <span className="text-[#0A2E73]">*</span>
@@ -273,6 +299,22 @@ export default function Register() {
                 {error}
               </div>
             )}
+
+            <label className="flex items-start gap-3 cursor-pointer mt-4">
+  <input
+    type="checkbox"
+    checked={disclaimerAccepted}
+    onChange={(e) => setDisclaimerAccepted(e.target.checked)}
+    className="mt-1"
+  />
+
+  <span className="text-slate-700 text-xs">
+    I understand that admission cannot be guaranteed by Ankush Mayacharya
+    Counselling Services. College allotment depends on CAP cutoffs,
+    category, seat availability, government rules, and student preferences.
+    Counselling fees are non-refundable after registration.
+  </span>
+</label>
 
             <button
               type="submit"

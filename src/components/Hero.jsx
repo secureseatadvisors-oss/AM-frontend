@@ -32,7 +32,7 @@ export default function Hero() {
 
             {/* Sub-headline: Localized Trust & Social Proof Connection */}
             <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium">
-              Don’t risk your hard-earned percentile with generic choices. Get personalized, step-by-step option form filing and cutoff analysis from <span className="text-slate-900 font-semibold">Ankush Mayachari</span> and the expert team at <span className="text-blue-600 font-semibold">Dattaprasad Classes, Malegaon</span>.
+              Don’t risk your hard-earned percentile with generic choices. Get personalized, step-by-step option form filing and cutoff analysis from <span className="text-slate-900 font-semibold">Ankush Mayacharya</span> and the expert team at <span className="text-blue-600 font-semibold">Dattaprasad Classes, Malegaon</span>.
             </p>
 
             {/* Conversion Button Block */}
