@@ -66,7 +66,7 @@ export default function About() {
           {/* Right Block: Content Journey Layout */}
           <div className="lg:col-span-7 space-y-6 text-slate-700">
             <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
-              Ankush Mayachari — Educator, Mentor, Strategy Specialist
+              Ankush Mayachaya — Educator, Mentor, Strategy Specialist
             </h2>
             
             <p className="text-sm sm:text-base leading-relaxed font-medium text-slate-600">
