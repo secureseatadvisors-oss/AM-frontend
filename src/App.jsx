@@ -16,6 +16,8 @@ import Dashboard from './pages/Dashboard';
 import AdminLogin from './pages/AdminLogin';
 import AdminDashboard from './pages/AdminDashboard';
 import PaymentSuccess from './pages/PaymentSuccess';
+import ProfileForm from './pages/profileForm';
+import ChatBot from './pages/ChatBot';
 
 const ProtectedRoute = ({ children }) => {
   const { student, loading } = useAuth();
@@ -50,6 +52,8 @@ const AppRoutes = () => {
       <Route path="/login" element={student ? <Navigate to="/dashboard" /> : <PublicLayout><Login /></PublicLayout>} />
       <Route path="/payment-success" element={<PublicLayout><PaymentSuccess /></PublicLayout>} />
       <Route path="/dashboard" element={<ProtectedRoute><PublicLayout><Dashboard /></PublicLayout></ProtectedRoute>} />
+      <Route path="/dashboard/:id/profileform" element={<ProtectedRoute><PublicLayout><ProfileForm /></PublicLayout></ProtectedRoute>} />
+      <Route path="/dashboard/chat" element={<ProtectedRoute><ChatBot /></ProtectedRoute>} />
       <Route path="/admin" element={<AdminLogin />} />
       <Route path="/admin/dashboard" element={<AdminDashboard />} />
       <Route path="*" element={<Navigate to="/" />} />

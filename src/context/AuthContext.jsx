@@ -6,22 +6,41 @@ const AuthContext = createContext(null);
 export const AuthProvider = ({ children }) => {
   const [student, setStudent] = useState(null);
   const [loading, setLoading] = useState(true);
+  const refreshStudent = async () => {
+  try {
+    const { data } = await api.get("/student/profile");
+    setStudent(data.student);
+  } catch (err) {
+    console.error(err);
+  }
+};
 
-  useEffect(() => {
-    const token = localStorage.getItem('token');
-    if (token) {
-      api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-      api.get('/student/profile')
-        .then(res => setStudent(res.data.student))
-        .catch(() => {
-          localStorage.removeItem('token');
-          delete api.defaults.headers.common['Authorization'];
-        })
-        .finally(() => setLoading(false));
-    } else {
-      setLoading(false);
-    }
-  }, []);
+useEffect(() => {
+
+  const token = localStorage.getItem("token");
+
+  if (token) {
+
+    api.defaults.headers.common["Authorization"] =
+      `Bearer ${token}`;
+
+    refreshStudent()
+      .catch(() => {
+
+        localStorage.removeItem("token");
+
+        delete api.defaults.headers.common.Authorization;
+
+      })
+      .finally(() => setLoading(false));
+
+  } else {
+
+    setLoading(false);
+
+  }
+
+}, []);
 
   const login = (token, studentData) => {
     localStorage.setItem('token', token);
@@ -36,7 +55,16 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ student, login, logout, loading, setStudent }}>
+    <AuthContext.Provider
+  value={{
+    student,
+    login,
+    logout,
+    loading,
+    setStudent,
+    refreshStudent,
+  }}
+>
       {children}
     </AuthContext.Provider>
   );
