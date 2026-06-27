@@ -13,7 +13,8 @@ const Row = ({ label, value, mono }) => (
 );
 
 export default function Dashboard() {
-  const { student, logout, setStudent } = useAuth();
+  const { student, logout, setStudent} = useAuth();
+  console.log("student", student);
   const fileRef = useRef(null);
   const [uploading, setUploading] = useState(false);
   const [uploadError, setUploadError] = useState('');
@@ -113,7 +114,7 @@ export default function Dashboard() {
     Quick Actions
   </h2>
 
-  {!student?.profile?.completed ? (
+  {!student?.profile?.completed? (
 
     <Link
       to={`/dashboard/${student.counsellingId}/profileform`}

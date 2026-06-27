@@ -28,6 +28,10 @@ export default function ProfileForm() {
   const navigate = useNavigate();
 
   const {  student, refreshStudent  } = useAuth();
+  console.log("student", student);
+  if( student?.workflow.stage == "PROFILE_COMPLETED"){
+    navigate("/dashboard");
+  }
 
   // Security
   if (
@@ -35,7 +39,7 @@ export default function ProfileForm() {
     id &&
     student.counsellingId !== id
   ) {
-    return <Navigate to="/dashboard" replace />;
+    navigate("/dashboard");
   }
 
   const {
